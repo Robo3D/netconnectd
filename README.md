@@ -47,6 +47,7 @@ Therefore netconnectd was designed based on the following requirements:
 [wicd]: http://wicd.sourceforge.net/
 
 ## Setup
+ALSO SEE https://github.com/Robo3D/netconnectd/blob/master/robo_installation_guide.md . It is tailored for the Robo OS system. It also includes solutios to known issues. 
 
 ### Prepare the system
 
