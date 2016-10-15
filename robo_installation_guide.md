@@ -135,6 +135,11 @@ If everything looks alright, configure the service so that it starts at boot up:
 
 ### Summary: 
 
+--- 
+**Update 10/14/16**
+New findings while trying to make a build script. Looks like wpa_supplicant was running which prevented hostapd from using the device. remove any wpa_supplicant in /etc/network/interfaces and it should work fine. 
+---
+
 Dnsmasq still automatically starts at boot.This conflicts with netconnectd's ability to start up an access point because the IP address that netconnectd would have used to bind its run of dnsmasq is already taken up by a previously booted dnsmasq run. **(resolved)**
 
 ### Leads for solving:
@@ -196,6 +201,8 @@ CONFIG_DIR=/etc/dnsmasq.d,.dpkg-dist,.dpkg-old,.dpkg-new
 ~~~
 
 Make sure that `/etc/init.d/` does not include a `dnsmasq` executable
+
+
 
 ---
 
